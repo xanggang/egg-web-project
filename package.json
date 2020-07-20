@@ -1,0 +1,87 @@
+{
+  "name": "web-duboo-egg-project",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "scripts": {
+    "web": "vue-cli-service serve",
+    "dev": "egg-bin dev",
+    "build": "vue-cli-service build && npm run tsc",
+    "build:web": "vue-cli-service build",
+    "start": "egg-scripts start --workers=1 --title=egg-server",
+    "stop": "egg-scripts stop --title=egg-server",
+    "debug": "egg-bin debug",
+    "test-local": "egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "clean": "ets clean",
+    "start:prod": "npm run tsc && npm run start"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.4.10",
+    "axios": "^0.19.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "core-js": "^2.6.5",
+    "egg": "^2.6.1",
+    "egg-http-proxy2": "^1.0.4",
+    "egg-jwt": "^3.1.7",
+    "egg-scripts": "^2.6.0",
+    "egg-sequelize": "^5.2.1",
+    "egg-socket.io": "^4.1.6",
+    "egg-validate": "^2.0.2",
+    "egg-view-nunjucks": "^2.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "moment": "^2.25.3",
+    "mysql2": "^2.1.0",
+    "os": "^0.1.1",
+    "qiniu": "^7.3.1",
+    "qiniu-js": "^2.5.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "babel-eslint": "^10.0.1",
+    "egg-bin": "^4.11.0",
+    "egg-mock": "^3.16.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "gulp": "^4.0.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.9.0",
+    "tslint": "^5.0.0",
+    "tslint-config-egg": "^1.0.0",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": "",
+  "license": "MIT"
+}
